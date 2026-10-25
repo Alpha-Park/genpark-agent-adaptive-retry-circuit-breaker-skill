@@ -1,12 +1,13 @@
 {
   "name": "genpark-agent-adaptive-retry-circuit-breaker-skill",
-  "version": "2.0.0",
-  "description": "Enterprise-grade adaptive circuit breaker state machine with jittered exponential backoff and half-open failure probes",
-  "author": "GenPark AI Engineering",
-  "license": "MIT",
-  "keywords": ["circuit-breaker", "resilience", "fault-tolerance", "retry-backoff", "mcp", "agent-skills"],
+  "version": "1.0.0",
+  "description": "Enterprise-grade circuit breaker with adaptive exponential backoff, jitter, failure count thresholds",
   "mcp": {
-    "supported": true,
-    "entrypoint": "mcp_server.py"
+    "server": "mcp_server.py",
+    "tools": [
+      "check_execution_allowed",
+      "report_result",
+      "get_breaker_state"
+    ]
   }
 }
